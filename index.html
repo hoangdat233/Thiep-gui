@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./app.js" defer></script>
+    <title>Yêu emmm!</title>
+</head>
+<body>
+    <!-- Floating hearts background -->
+    <div class="floating-hearts"></div>
+    <div class="meo-cute meo-cute-1">
+        <img src="./image/meocute1.gif" alt="meo cute 1">
+    </div>
+    <div class="meo-cute meo-cute-2">
+        <img src="./image/meocute2.gif" alt="meo cute 2">
+    </div>
+    <div class="meo-cute meo-cute-3">
+        <img src="./image/meocute3.gif" alt="meo cute 3">
+    </div>
+    <div class="meo-cute meo-cute-4">
+        <img src="./image/meocute4.gif" alt="meo cute 4">
+    </div>
+    <!-- Trang trí 4 ảnh nền với khung trái tim -->
+    <div class="nen-heart nen-heart-1">
+        <img src="./image/nen1.png" alt="nen1">
+    </div>
+    <div class="nen-heart nen-heart-2">
+        <img src="./image/nen2.png" alt="nen2">
+    </div>
+    <div class="nen-heart nen-heart-3">
+        <img src="./image/nen3.png" alt="nen3">
+    </div>
+    <div class="nen-heart nen-heart-4">
+        <img src="./image/nen4.png" alt="nen4">
+    </div>
+    <div class="loading">
+        <div class="boxHeartImg">
+            <div class="heartItem item1">
+                <img src="./image/heart.png" alt="">
+            </div>
+            <div class="heartItem item2">
+                <img src="./image/heart.png" alt="">
+            </div>
+            <div class="heartItem item3">
+                <img src="./image/heart.png" alt="">
+            </div>
+        </div>
+        <div class="heartBox">
+            <div class="heart"></div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress"></div>
+            <div class="percent">100%</div>
+        </div>
+        <h2 class="textBox">
+            <span class="textLoad">loading love</span>
+            <span class="cricle1">.</span>
+            <span class="cricle2">.</span>
+            <span class="cricle3">.</span>
+        </h2>
+        <div class="buttonCLick">
+            <img src="./image/cursor.png" alt="">
+            <div class="button">
+                <p class="textBtn"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+    // Hiệu ứng trái tim rơi
+    function createFloatingHeart() {
+        const heart = document.createElement('div');
+        heart.className = 'floating-heart';
+        heart.innerHTML = '💗';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.fontSize = (18 + Math.random() * 18) + 'px';
+        heart.style.animationDuration = (6 + Math.random() * 4) + 's';
+        document.querySelector('.floating-hearts').appendChild(heart);
+        setTimeout(() => heart.remove(), 9000);
+    }
+    setInterval(createFloatingHeart, 700);
+    </script>
+</body>
+</html>
